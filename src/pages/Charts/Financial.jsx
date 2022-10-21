@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, HiloSeries, Tooltip, DateTime, Zoom, Logarithmic, Crosshair } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, HiloSeries,
+  Tooltip, DateTime, Zoom, Logarithmic, Crosshair } from '@syncfusion/ej2-react-charts';
 
 import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
@@ -9,7 +10,7 @@ const date1 = new Date('2017, 1, 1');
 
 function filterValue(value) {
   if (value.x >= date1) {
-    return value.x, value.high, value.low;
+    return (value.x, value.high, value.low);
   }
 }
 const returnValue = financialChartData.filter(filterValue);
